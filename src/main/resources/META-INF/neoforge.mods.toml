@@ -1,0 +1,35 @@
+modLoader = "javafml"
+loaderVersion = "[1,)"
+license = "Academic Free License v3.0"
+
+[[mods]]
+modId = "${mod_id}"
+version = "${mod_version}"
+displayName = "Monster Hunter Villager"
+logoFile = "logo.png"
+authors = "Yoshi (original mod), CoolFreeze23 (NeoForge 1.21.1 port)"
+credits = "Original Monster Hunter Villager 1.2.1 by Yoshi, licensed under the Academic Free License v3.0. This NeoForge port is a derivative work under the same license."
+description = '''
+Adds a Monster Hunter profession for villagers: a trap-throwing, knife-wielding villager who hunts nearby monsters, plus the Hunter's Workbench and three kinds of traps.
+'''
+
+[[dependencies.${mod_id}]]
+modId = "neoforge"
+type = "required"
+versionRange = "${neo_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "minecraft"
+type = "required"
+versionRange = "${minecraft_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "jei"
+type = "optional"
+versionRange = "[19,)"
+ordering = "NONE"
+side = "BOTH"

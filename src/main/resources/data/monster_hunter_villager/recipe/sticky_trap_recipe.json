@@ -1,0 +1,15 @@
+{
+  "type": "monster_hunter_villager:hunters_workbench_jei",
+  "ingredients": [
+    {
+      "item": "monster_hunter_villager:trap_prototype"
+    },
+    {
+      "item": "minecraft:slime_ball"
+    }
+  ],
+  "output": {
+    "id": "monster_hunter_villager:sticky_trap_item",
+    "count": 1
+  }
+}

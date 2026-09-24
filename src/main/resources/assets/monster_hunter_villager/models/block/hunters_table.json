@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "monster_hunter_villager:block/hunters_table_bottom",
+    "up": "monster_hunter_villager:block/hunters_table_top",
+    "north": "monster_hunter_villager:block/hunters_table_front",
+    "east": "monster_hunter_villager:block/hunters_table_side",
+    "south": "monster_hunter_villager:block/hunters_table_front",
+    "west": "monster_hunter_villager:block/hunters_table_side",
+    "particle": "monster_hunter_villager:block/hunters_table_bottom"
+  },
+  "render_type": "solid"
+}

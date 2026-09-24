@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "monster_hunter_villager:item/soul_chain_trap"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "monster_hunter_villager:hunters_workbench_jei",
+  "ingredients": [
+    {
+      "item": "monster_hunter_villager:trap_prototype"
+    },
+    {
+      "item": "minecraft:soul_lantern"
+    }
+  ],
+  "output": {
+    "id": "monster_hunter_villager:soul_chain_trap_item",
+    "count": 1
+  }
+}

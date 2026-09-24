@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "minecraft:item", "name": "monster_hunter_villager:hunters_table" }
+      ]
+    }
+  ],
+  "random_sequence": "monster_hunter_villager:blocks/hunters_table"
+}

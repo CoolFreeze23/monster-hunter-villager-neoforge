@@ -1,0 +1,21 @@
+{
+  "block.monster_hunter_villager.hunters_table": "Hunter's Workbench",
+  "death.attack.trap": "%1$s stepped into a trap",
+  "death.attack.trap.item": "%1$s stepped into a trap because of %2$s using %3$s",
+  "death.attack.trap.player": "%1$s stepped into a trap whilst trying to escape %2$s",
+  "entity.minecraft.villager.monster_hunter_villager.monster_hunter": "Monster Hunter",
+  "entity.monster_hunter_villager.empty_trap": "Empty Trap",
+  "entity.monster_hunter_villager.sharpened_trap": "Sharpened Trap",
+  "entity.monster_hunter_villager.soul_chain_trap": "Soul Chain Trap",
+  "entity.monster_hunter_villager.sticky_trap": "Sticky Trap",
+  "gui.monster_hunter_villager.hunters_table_gui.label_hunters_table": "Hunter's Workbench",
+  "item.monster_hunter_villager.hunters_knife": "Hunter's Knife",
+  "item.monster_hunter_villager.hunters_knife.desc1": "On every hit it does half a heart of extra damage plus 1-6% of the mob's max HP,",
+  "item.monster_hunter_villager.hunters_knife.desc2": "if the target is trapped in a trap it will do 2 hearts of extra damage",
+  "item.monster_hunter_villager.hunters_knife.desc3": "plus 5-8% of the mobs max HP. It also inflicts slowness 1 for 2 seconds.",
+  "item.monster_hunter_villager.sharpened_trap_item": "Sharpened Trap",
+  "item.monster_hunter_villager.soul_chain_trap_item": "Soul Chain Trap",
+  "item.monster_hunter_villager.sticky_trap_item": "Sticky Trap",
+  "item.monster_hunter_villager.trap_prototype": "Trap Prototype",
+  "jei.monster_hunter_villager.hunters_workbench": "Hunter's Workbench"
+}

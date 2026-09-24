@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "monster_hunter_villager:hunters_tent_white",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 100,
+    "separation": 40,
+    "salt": 1153968321
+  }
+}

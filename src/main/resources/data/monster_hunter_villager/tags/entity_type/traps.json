@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "monster_hunter_villager:sharpened_trap",
+    "monster_hunter_villager:soul_chain_trap",
+    "monster_hunter_villager:empty_trap",
+    "monster_hunter_villager:sticky_trap"
+  ]
+}

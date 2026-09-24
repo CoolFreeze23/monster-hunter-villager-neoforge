@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="330" viewBox="0 0 800 330" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">Server time the mod adds per tick</title>
+<desc id="d">Hunters standing by: original +1.46 ms, port +0.06 ms; Hunters targeting zombies: original +2.40 ms, port +0.09 ms</desc>
+<rect width="800" height="330" rx="12" fill="#1a1a19"/>
+<text x="32" y="44" font-size="20" font-weight="600" fill="#ffffff">Server time the mod adds per tick</text>
+<text x="32" y="68" font-size="14" fill="#c3c2b7">500 zombies loaded on a dedicated server (lower is better)</text>
+<rect x="32" y="88" width="12" height="12" rx="3" fill="#3987e5"/>
+<text x="50" y="99" font-size="13" fill="#c3c2b7">Original 1.2.1 (Forge 1.20.1)</text>
+<rect x="282" y="88" width="12" height="12" rx="3" fill="#d95926"/>
+<text x="300" y="99" font-size="13" fill="#c3c2b7">This port (NeoForge 1.21.1)</text>
+<line x1="250.0" y1="122" x2="250.0" y2="280" stroke="#383835" stroke-width="1"/>
+<text x="250.0" y="298" font-size="12" fill="#898781" text-anchor="middle">0.0 ms</text>
+<line x1="332.0" y1="122" x2="332.0" y2="280" stroke="#2c2c2a" stroke-width="1"/>
+<text x="332.0" y="298" font-size="12" fill="#898781" text-anchor="middle">0.5 ms</text>
+<line x1="414.0" y1="122" x2="414.0" y2="280" stroke="#2c2c2a" stroke-width="1"/>
+<text x="414.0" y="298" font-size="12" fill="#898781" text-anchor="middle">1.0 ms</text>
+<line x1="496.0" y1="122" x2="496.0" y2="280" stroke="#2c2c2a" stroke-width="1"/>
+<text x="496.0" y="298" font-size="12" fill="#898781" text-anchor="middle">1.5 ms</text>
+<line x1="578.0" y1="122" x2="578.0" y2="280" stroke="#2c2c2a" stroke-width="1"/>
+<text x="578.0" y="298" font-size="12" fill="#898781" text-anchor="middle">2.0 ms</text>
+<line x1="660.0" y1="122" x2="660.0" y2="280" stroke="#2c2c2a" stroke-width="1"/>
+<text x="660.0" y="298" font-size="12" fill="#898781" text-anchor="middle">2.5 ms</text>
+<text x="234" y="163" font-size="14" fill="#ffffff" text-anchor="end">Hunters standing by</text>
+<path d="M250.0,136.0 h234.9 a4,4 0 0 1 4,4 v14.0 a4,4 0 0 1 -4,4 h-234.9 z" fill="#3987e5"/>
+<text x="496.9" y="152" font-size="13" fill="#ffffff">+1.46 ms<tspan fill="#c3c2b7"></tspan></text>
+<path d="M250.0,160.0 h5.5 a4,4 0 0 1 4,4 v14.0 a4,4 0 0 1 -4,4 h-5.5 z" fill="#d95926"/>
+<text x="267.5" y="176" font-size="13" fill="#ffffff">+0.06 ms<tspan fill="#c3c2b7">  (within measurement noise)</tspan></text>
+<text x="234" y="233" font-size="14" fill="#ffffff" text-anchor="end">Hunters targeting zombies</text>
+<path d="M250.0,206.0 h388.8 a4,4 0 0 1 4,4 v14.0 a4,4 0 0 1 -4,4 h-388.8 z" fill="#3987e5"/>
+<text x="650.8" y="222" font-size="13" fill="#ffffff">+2.40 ms<tspan fill="#c3c2b7"></tspan></text>
+<path d="M250.0,230.0 h10.6 a4,4 0 0 1 4,4 v14.0 a4,4 0 0 1 -4,4 h-10.6 z" fill="#d95926"/>
+<text x="272.6" y="246" font-size="13" fill="#ffffff">+0.09 ms<tspan fill="#c3c2b7">  (within measurement noise)</tspan></text>
+<text x="32" y="316" font-size="12" fill="#898781">Mean server tick time with the mod minus without it. Each setup ran twice in A-B-B-A order. Method and raw data: tools/benchmark.</text>
+</svg>

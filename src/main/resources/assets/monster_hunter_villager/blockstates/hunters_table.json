@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "monster_hunter_villager:block/hunters_table"
+    },
+    "facing=east": {
+      "model": "monster_hunter_villager:block/hunters_table",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "monster_hunter_villager:block/hunters_table",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "monster_hunter_villager:block/hunters_table",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,117 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.141'
+}
+
+version = mod_version
+group = 'net.monsterhuntervillager'
+
+base {
+    archivesName = 'monster_hunter_villager-neoforge-1.21.1'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+// GameTests live in their own source set so they never ship in the mod jar; it is folded
+// into the mod for dev runs so NeoForge's @GameTestHolder scan finds them.
+sourceSets {
+    gametest {
+        compileClasspath += sourceSets.main.output
+        runtimeClasspath += sourceSets.main.output
+    }
+    // Scripted dev-client visual check (runClientTest); also never shipped.
+    clienttest {
+        compileClasspath += sourceSets.main.output
+        runtimeClasspath += sourceSets.main.output
+    }
+}
+configurations {
+    gametestImplementation.extendsFrom implementation
+    gametestRuntimeOnly.extendsFrom runtimeOnly
+    clienttestImplementation.extendsFrom implementation
+    clienttestRuntimeOnly.extendsFrom runtimeOnly
+}
+
+neoForge {
+    version = neo_version
+    addModdingDependenciesTo sourceSets.gametest
+    addModdingDependenciesTo sourceSets.clienttest
+
+    runs {
+        client {
+            client()
+            gameDirectory = file('run/client')
+        }
+        server {
+            server()
+            gameDirectory = file('run/server')
+            programArgument '--nogui'
+        }
+        // Creates a flat test world, screenshots every scene into run/clienttest/screenshots, then quits.
+        clientTest {
+            client()
+            gameDirectory = file('run/clienttest')
+            systemProperty 'mhv.clientTest', 'true'
+            programArguments.addAll '--width', '1600', '--height', '900'
+        }
+        // Records the README showcase stills and GIF frames into run/showcase/screenshots, then quits.
+        showcase {
+            client()
+            gameDirectory = file('run/showcase')
+            systemProperty 'mhv.showcase', 'true'
+            systemProperty 'mhv.showcase.only', providers.gradleProperty('showcaseOnly').getOrElse('')
+            programArguments.addAll '--width', '1600', '--height', '900'
+        }
+        gameTestServer {
+            type = 'gameTestServer'
+            gameDirectory = file('run/gametest')
+            systemProperty 'neoforge.enabledGameTestNamespaces', mod_id
+        }
+    }
+
+    mods {
+        "${mod_id}" {
+            sourceSet sourceSets.main
+            sourceSet sourceSets.gametest
+            sourceSet sourceSets.clienttest
+        }
+    }
+}
+
+repositories {
+    maven {
+        name = 'JEI'
+        url = 'https://maven.blamejared.com/'
+        content {
+            includeGroup 'mezz.jei'
+            includeGroup 'net.mezzdev.config' // JEI's own config library, needed at runtime
+        }
+    }
+}
+
+dependencies {
+    // JEI is optional at runtime; only its API is needed to compile the plugin.
+    compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
+    clienttestCompileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
+    if (providers.gradleProperty('withJei').map { it.toBoolean() }.getOrElse(false)) {
+        runtimeOnly "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
+    }
+}
+
+tasks.named('processResources', ProcessResources) {
+    var props = [
+            mod_id         : mod_id,
+            mod_version    : mod_version,
+            neo_version_range: neo_version_range,
+            minecraft_range: minecraft_range,
+    ]
+    inputs.properties props
+    filesMatching('META-INF/neoforge.mods.toml') {
+        expand props
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.compilerArgs << '-Xlint:deprecation'
+}

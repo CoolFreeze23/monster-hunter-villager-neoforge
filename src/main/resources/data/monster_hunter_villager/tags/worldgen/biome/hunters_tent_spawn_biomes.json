@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "plains",
+    "snowy_plains",
+    "snowy_taiga",
+    "taiga",
+    "forest",
+    "savanna",
+    "savanna_plateau",
+    "meadow",
+    "old_growth_spruce_taiga",
+    "sunflower_plains",
+    "windswept_savanna",
+    "old_growth_pine_taiga",
+    "sparse_jungle"
+  ]
+}

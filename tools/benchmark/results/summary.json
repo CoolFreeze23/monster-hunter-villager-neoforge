@@ -1,0 +1,380 @@
+{
+  "active-forge-original-1": {
+    "mean_ms": 4.913,
+    "samples_ms": [
+      5.06,
+      4.842,
+      4.902,
+      4.799,
+      4.879,
+      4.826,
+      5.16,
+      4.933,
+      4.884,
+      4.949,
+      4.891,
+      4.837
+    ],
+    "entity_counts": [
+      "Test passed, count: 500",
+      "Test passed, count: 8"
+    ]
+  },
+  "active-forge-original-2": {
+    "mean_ms": 4.28,
+    "samples_ms": [
+      4.315,
+      4.145,
+      4.616,
+      4.523,
+      4.292,
+      4.269,
+      4.158,
+      4.089,
+      4.553,
+      4.509,
+      3.948,
+      3.946
+    ],
+    "entity_counts": [
+      "Test passed, count: 500",
+      "Test passed, count: 8"
+    ]
+  },
+  "active-forge-vanilla-1": {
+    "mean_ms": 2.27,
+    "samples_ms": [
+      2.274,
+      2.272,
+      2.263,
+      2.224,
+      2.303,
+      2.262,
+      2.277,
+      2.281,
+      2.26,
+      2.257,
+      2.277,
+      2.29
+    ],
+    "entity_counts": [
+      "Test passed, count: 500",
+      "Test passed, count: 8"
+    ]
+  },
+  "active-forge-vanilla-2": {
+    "mean_ms": 2.133,
+    "samples_ms": [
+      2.157,
+      2.129,
+      2.142,
+      2.092,
+      2.167,
+      2.136,
+      2.141,
+      2.139,
+      2.131,
+      2.137,
+      2.132,
+      2.095
+    ],
+    "entity_counts": [
+      "Test passed, count: 500",
+      "Test passed, count: 8"
+    ]
+  },
+  "active-neo-port-1": {
+    "mean_ms": 1.716,
+    "samples_ms": [
+      2.124,
+      2.083,
+      1.985,
+      1.634,
+      1.681,
+      1.626,
+      1.595,
+      1.575,
+      1.569,
+      1.551,
+      1.581,
+      1.591
+    ],
+    "entity_counts": [
+      "Test passed, count: 500",
+      "Test passed, count: 8"
+    ]
+  },
+  "active-neo-port-2": {
+    "mean_ms": 1.839,
+    "samples_ms": [
+      2.119,
+      2.098,
+      2.115,
+      2.076,
+      2.115,
+      2.214,
+      1.568,
+      1.579,
+      1.582,
+      1.535,
+      1.534,
+      1.537
+    ],
+    "entity_counts": [
+      "Test passed, count: 500",
+      "Test passed, count: 8"
+    ]
+  },
+  "active-neo-vanilla-1": {
+    "mean_ms": 1.518,
+    "samples_ms": [
+      1.55,
+      1.54,
+      1.578,
+      1.584,
+      1.658,
+      1.491,
+      1.491,
+      1.46,
+      1.465,
+      1.467,
+      1.462,
+      1.471
+    ],
+    "entity_counts": [
+      "Test passed, count: 500",
+      "Test passed, count: 8"
+    ]
+  },
+  "active-neo-vanilla-2": {
+    "mean_ms": 1.86,
+    "samples_ms": [
+      2.012,
+      2.034,
+      2.034,
+      2.034,
+      2.057,
+      1.992,
+      1.992,
+      2.023,
+      1.749,
+      1.492,
+      1.446,
+      1.455
+    ],
+    "entity_counts": [
+      "Test passed, count: 500",
+      "Test passed, count: 8"
+    ]
+  },
+  "final-active-neo-port": {
+    "mean_ms": 1.264,
+    "samples_ms": [
+      1.268,
+      1.257,
+      1.257,
+      1.243,
+      1.275,
+      1.26,
+      1.239,
+      1.257,
+      1.261,
+      1.259,
+      1.306,
+      1.285
+    ],
+    "entity_counts": [
+      "Test passed, count: 500",
+      "Test passed, count: 8"
+    ]
+  },
+  "final-idle-neo-port": {
+    "mean_ms": 1.256,
+    "samples_ms": [
+      1.593,
+      1.245,
+      1.276,
+      1.255,
+      1.277,
+      1.211,
+      1.209,
+      1.219,
+      1.214,
+      1.21,
+      1.19,
+      1.178
+    ],
+    "entity_counts": [
+      "Test passed, count: 500",
+      "Test passed, count: 4"
+    ]
+  },
+  "idle-forge-original-1": {
+    "mean_ms": 3.545,
+    "samples_ms": [
+      3.554,
+      3.505,
+      3.488,
+      3.522,
+      3.952,
+      3.521,
+      3.47,
+      3.458,
+      3.454,
+      3.479,
+      3.476,
+      3.662
+    ],
+    "entity_counts": [
+      "Test passed, count: 500",
+      "Test passed, count: 4"
+    ]
+  },
+  "idle-forge-original-2": {
+    "mean_ms": 3.739,
+    "samples_ms": [
+      3.793,
+      3.637,
+      3.654,
+      3.647,
+      3.889,
+      4.012,
+      4.148,
+      3.9,
+      3.545,
+      3.534,
+      3.55,
+      3.558
+    ],
+    "entity_counts": [
+      "Test passed, count: 500",
+      "Test passed, count: 4"
+    ]
+  },
+  "idle-forge-vanilla-1": {
+    "mean_ms": 2.071,
+    "samples_ms": [
+      2.119,
+      2.096,
+      2.134,
+      2.108,
+      2.104,
+      2.041,
+      2.042,
+      2.054,
+      2.028,
+      2.031,
+      2.055,
+      2.034
+    ],
+    "entity_counts": [
+      "Test passed, count: 500",
+      "Test passed, count: 4"
+    ]
+  },
+  "idle-forge-vanilla-2": {
+    "mean_ms": 2.3,
+    "samples_ms": [
+      2.301,
+      2.288,
+      2.296,
+      2.284,
+      2.352,
+      2.288,
+      2.284,
+      2.317,
+      2.281,
+      2.344,
+      2.292,
+      2.27
+    ],
+    "entity_counts": [
+      "Test passed, count: 500",
+      "Test passed, count: 4"
+    ]
+  },
+  "idle-neo-port-1": {
+    "mean_ms": 1.754,
+    "samples_ms": [
+      2.163,
+      2.157,
+      2.124,
+      1.876,
+      1.658,
+      1.604,
+      1.598,
+      1.599,
+      1.574,
+      1.565,
+      1.57,
+      1.56
+    ],
+    "entity_counts": [
+      "Test passed, count: 500",
+      "Test passed, count: 4"
+    ]
+  },
+  "idle-neo-port-2": {
+    "mean_ms": 1.513,
+    "samples_ms": [
+      1.522,
+      1.467,
+      1.464,
+      1.524,
+      1.532,
+      1.529,
+      1.532,
+      1.528,
+      1.524,
+      1.538,
+      1.498,
+      1.497
+    ],
+    "entity_counts": [
+      "Test passed, count: 500",
+      "Test passed, count: 4"
+    ]
+  },
+  "idle-neo-vanilla-1": {
+    "mean_ms": 1.49,
+    "samples_ms": [
+      1.485,
+      1.492,
+      1.504,
+      1.488,
+      1.505,
+      1.516,
+      1.445,
+      1.582,
+      1.47,
+      1.468,
+      1.483,
+      1.442
+    ],
+    "entity_counts": [
+      "Test passed, count: 500",
+      "Test passed, count: 4"
+    ]
+  },
+  "idle-neo-vanilla-2": {
+    "mean_ms": 1.662,
+    "samples_ms": [
+      2.043,
+      2.046,
+      2.087,
+      1.541,
+      1.545,
+      1.501,
+      1.539,
+      1.532,
+      1.541,
+      1.52,
+      1.522,
+      1.522
+    ],
+    "entity_counts": [
+      "Test passed, count: 500",
+      "Test passed, count: 4"
+    ]
+  }
+}

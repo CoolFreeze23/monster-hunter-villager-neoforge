@@ -1,0 +1,15 @@
+{
+  "type": "monster_hunter_villager:hunters_workbench_jei",
+  "ingredients": [
+    {
+      "item": "monster_hunter_villager:trap_prototype"
+    },
+    {
+      "item": "monster_hunter_villager:hunters_knife"
+    }
+  ],
+  "output": {
+    "id": "monster_hunter_villager:sharpened_trap_item",
+    "count": 1
+  }
+}
