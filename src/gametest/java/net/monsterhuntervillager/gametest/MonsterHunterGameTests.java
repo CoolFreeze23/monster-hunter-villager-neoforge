@@ -12,6 +12,7 @@ import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraft.world.entity.ai.village.poi.PoiTypes;
 import net.minecraft.world.entity.animal.Pig;
 import net.minecraft.world.entity.monster.Husk;
+import net.minecraft.world.entity.monster.Silverfish;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.entity.player.Player;
@@ -29,6 +30,7 @@ import net.monsterhuntervillager.entity.StickyTrapEntity;
 import net.monsterhuntervillager.entity.TrapKind;
 import net.monsterhuntervillager.entity.TrapProjectileEntity;
 import net.monsterhuntervillager.hunter.HunterCombat;
+import net.monsterhuntervillager.hunter.MonsterHunterAI;
 import net.monsterhuntervillager.menu.HuntersTableMenu;
 import net.monsterhuntervillager.registry.ModAttachments;
 import net.monsterhuntervillager.registry.ModBlocks;
@@ -297,6 +299,34 @@ public class MonsterHunterGameTests {
                     || helper.getEntities(ModEntities.SHARPENED_TRAP.get()).stream().anyMatch(trap -> trap.isOwnedBy(hunter));
             helper.assertTrue(trapThrown, "Hunter has not thrown a trap at the husk yet");
             release(helper, witness);
+        });
+    }
+
+    @GameTest(template = ARENA, timeoutTicks = 600)
+    public static void hunterHuntsWhatTheQuarryTagAdds(GameTestHelper helper) {
+        // TestQuarryPack puts silverfish in the quarry tag; they are not on the original list.
+        helper.assertTrue(EntityType.SILVERFISH.is(MonsterHunterAI.QUARRY), "The test data pack did not put silverfish in the quarry tag");
+        ServerPlayer witness = witness(helper);
+        Villager hunter = hunter(helper, new BlockPos(8, 2, 12));
+        Silverfish silverfish = helper.spawnWithNoFreeWill(EntityType.SILVERFISH, new BlockPos(12, 2, 12));
+
+        helper.succeedWhen(() -> {
+            helper.assertTrue(silverfish.getUUID().equals(hunter.getData(ModAttachments.HUNTER_STATE).quarry()), "Hunter never picked the tagged silverfish as its quarry");
+            boolean trapThrown = helper.getEntities(ModEntities.STICKY_TRAP.get()).stream().anyMatch(trap -> trap.isOwnedBy(hunter))
+                    || helper.getEntities(ModEntities.SHARPENED_TRAP.get()).stream().anyMatch(trap -> trap.isOwnedBy(hunter));
+            helper.assertTrue(trapThrown, "Hunter has not thrown a trap at the silverfish yet");
+            release(helper, witness);
+        });
+    }
+
+    @GameTest(template = ARENA, timeoutTicks = 120)
+    public static void hunterIgnoresMobsOffTheList(GameTestHelper helper) {
+        // Endermites are neither on the original list nor in the quarry tag.
+        Villager hunter = hunter(helper, new BlockPos(8, 2, 12));
+        helper.spawnWithNoFreeWill(EntityType.ENDERMITE, new BlockPos(12, 2, 12));
+        helper.runAfterDelay(100, () -> {
+            helper.assertTrue(hunter.getData(ModAttachments.HUNTER_STATE).quarry() == null, "Hunter went after an endermite");
+            helper.succeed();
         });
     }
 

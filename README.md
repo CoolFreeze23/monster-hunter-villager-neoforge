@@ -33,7 +33,8 @@ they hunt nearby monsters, set traps, and trade in monster loot and hunting gear
 A Monster Hunter spots zombies (husks and drowned too), spiders, skeletons, strays and slimes within
 15 blocks. It throws a **sticky trap** to pin its quarry, follows up with **sharpened traps** once
 it's stuck, keeps a few blocks away while it works, and picks its own traps back up when the fight
-is over.
+is over. Other mods and datapacks can give it more to hunt through the `monster_hunter_villager:quarry`
+entity tag.
 
 <p align="center"><img src="docs/media/hunt.gif" alt="A Monster Hunter throwing a sticky trap under a husk, then sharpened traps, as the husk flashes red" width="800"></p>
 
@@ -138,7 +139,8 @@ hunter died during any run. Scripts and raw results are in [tools/benchmark](too
 ## Installing
 
 Needs Minecraft 1.21.1 with NeoForge 21.1.77 or newer (tested on 21.1.77 and 21.1.248). Download the
-jar from [Releases](../../releases) and put it in your `mods` folder. JEI is optional.
+jar from [Releases](../../releases) and put it in your `mods` folder. JEI is optional. The mod is in
+English and Brazilian Portuguese.
 
 ## Changes from the original
 
@@ -207,7 +209,7 @@ jar from [Releases](../../releases) and put it in your `mods` folder. JEI is opt
 
 ```
 gradlew build                                              # mod jar in build/libs
-gradlew runGameTestServer                                  # 14 in-game tests, headless, on NeoForge 21.1.77
+gradlew runGameTestServer                                  # 16 in-game tests, headless, on NeoForge 21.1.77
 gradlew runGameTestServer -Pneo_version=21.1.248           # the same tests on a newer NeoForge
 gradlew runClient -PwithJei=true
 gradlew runClientTest -PwithJei=true -Pneo_version=21.1.248   # scripted visual check
@@ -220,8 +222,9 @@ auto-detection, which older 21.1 builds lack.
 
 The GameTests live in `src/gametest` and never ship in the jar. They cover the job site, workbench
 crafting, trap deployment and ownership, each trap's effect, trap pickup, the knife bonus, a
-hunter finding and trapping a monster, retaliation, the tent templates upgrading from 1.20.1, and
-that ordinary mobs get no data attached.
+hunter finding and trapping a monster, a hunter going after a creature added through the quarry tag
+(from a small test data pack) and ignoring one that isn't, retaliation, the tent templates upgrading
+from 1.20.1, and that ordinary mobs get no data attached.
 
 `runClientTest` and `runShowcase` open a game window and drive it from a script in `src/clienttest`
 (also never shipped). The first saves a screenshot of every scene to `run/clienttest/screenshots`.
@@ -233,5 +236,6 @@ performance chart from the benchmark results.
 ## Credits and license
 
 Original mod by **Yoshi**, released under the Academic Free License v3.0. This port is a derivative
-work under the same license (see [NOTICE.md](NOTICE.md)). Textures, models, structures, language
-strings and the trade table are the original author's.
+work under the same license (see [NOTICE.md](NOTICE.md)). Textures, models, structures, the English
+text and the trade table are the original author's. The Brazilian Portuguese translation was added
+for this port.

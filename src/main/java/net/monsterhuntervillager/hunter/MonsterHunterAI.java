@@ -3,15 +3,18 @@ package net.monsterhuntervillager.hunter;
 import net.minecraft.commands.arguments.EntityAnchorArgument;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.tags.TagKey;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
@@ -30,6 +33,7 @@ import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
+import net.monsterhuntervillager.MonsterHunterVillager;
 import net.monsterhuntervillager.entity.AbstractTrapEntity;
 import net.monsterhuntervillager.entity.SharpenedTrapEntity;
 import net.monsterhuntervillager.entity.StickyTrapEntity;
@@ -47,9 +51,10 @@ import java.util.List;
 /**
  * The Monster Hunter's combat behaviour, run once per tick for each Monster Hunter villager.
  *
- * <p>Behaviour is the original's: spot a zombie, spider, skeleton, stray or slime within 15 blocks,
- * circle it, throw sticky and sharpened traps at it, knife it at close range, drink a healing
- * potion when low, and collect its own traps afterwards. What changed is the cost:
+ * <p>Behaviour is the original's: spot a zombie, spider, skeleton, stray or slime (or anything in
+ * the {@link #QUARRY} tag) within 15 blocks, circle it, throw sticky and sharpened traps at it,
+ * knife it at close range, drink a healing potion when low, and collect its own traps afterwards.
+ * What changed is the cost:
  * <ul>
  *   <li>the original ran on every living entity in the world, both sides, and decided whether
  *       the entity was a hunter by serialising the whole entity to NBT every tick;</li>
@@ -60,6 +65,9 @@ import java.util.List;
  * Now it runs server-side, for hunters only, with a direct UUID lookup and plain method calls.
  */
 public final class MonsterHunterAI {
+    /** Extra creatures Monster Hunters hunt, on top of the original list. Empty by default; datapacks and addons fill it. */
+    public static final TagKey<EntityType<?>> QUARRY = TagKey.create(Registries.ENTITY_TYPE, MonsterHunterVillager.id("quarry"));
+
     private static final double QUARRY_RANGE = 300.0;
     private static final double SPOT_RANGE = 15.0;
     private static final double MELEE_REACH = 0.9;
@@ -113,7 +121,8 @@ public final class MonsterHunterAI {
     }
 
     private static boolean isHuntable(Mob mob) {
-        return (mob instanceof Zombie || mob instanceof Spider || mob instanceof Skeleton || mob instanceof Stray || mob instanceof Slime)
+        return (mob instanceof Zombie || mob instanceof Spider || mob instanceof Skeleton || mob instanceof Stray || mob instanceof Slime
+                || mob.getType().is(QUARRY))
                 && !mob.isInWaterOrBubble();
     }
 

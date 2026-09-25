@@ -1,0 +1,21 @@
+{
+  "block.monster_hunter_villager.hunters_table": "Bancada do Caçador",
+  "death.attack.trap": "%1$s pisou numa armadilha",
+  "death.attack.trap.item": "%1$s pisou numa armadilha por causa de %2$s, que usava %3$s",
+  "death.attack.trap.player": "%1$s pisou numa armadilha enquanto tentava fugir de %2$s",
+  "entity.minecraft.villager.monster_hunter_villager.monster_hunter": "Caçador de Monstros",
+  "entity.monster_hunter_villager.empty_trap": "Armadilha Vazia",
+  "entity.monster_hunter_villager.sharpened_trap": "Armadilha Afiada",
+  "entity.monster_hunter_villager.soul_chain_trap": "Armadilha de Correntes das Almas",
+  "entity.monster_hunter_villager.sticky_trap": "Armadilha Grudenta",
+  "gui.monster_hunter_villager.hunters_table_gui.label_hunters_table": "Bancada do Caçador",
+  "item.monster_hunter_villager.hunters_knife": "Faca do Caçador",
+  "item.monster_hunter_villager.hunters_knife.desc1": "A cada golpe, causa meio coração de dano extra mais 1-6% da vida máxima do mob;",
+  "item.monster_hunter_villager.hunters_knife.desc2": "se o alvo estiver preso numa armadilha, causa 2 corações de dano extra",
+  "item.monster_hunter_villager.hunters_knife.desc3": "mais 5-8% da vida máxima do mob. Também aplica Lentidão I por 2 segundos.",
+  "item.monster_hunter_villager.sharpened_trap_item": "Armadilha Afiada",
+  "item.monster_hunter_villager.soul_chain_trap_item": "Armadilha de Correntes das Almas",
+  "item.monster_hunter_villager.sticky_trap_item": "Armadilha Grudenta",
+  "item.monster_hunter_villager.trap_prototype": "Protótipo de Armadilha",
+  "jei.monster_hunter_villager.hunters_workbench": "Bancada do Caçador"
+}
